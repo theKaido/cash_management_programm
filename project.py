@@ -1,12 +1,27 @@
 from tkinter import *
 
 
-Main_widow = Tk()
+widow = Tk()
+widow.title("Authentication")
+widow.geometry("600x400")
 
-Main_widow.geometry("900x900")
-
-label = Label(text = "Label affichage")
-label.place(x = 100 , y = 100)
+labeltitre = Label(text = "Connection",relief=GROOVE)
+labeltitre.place( x = 270, y = 50)
 
 
-Main_widow.mainloop()
+labelid = Label(text = "User:",)
+labelid.place(x = 100 , y = 100)
+user = StringVar()
+user.set("ID")
+saisieUser = Entry(widow,textvariable = user,bd = '5')
+saisieUser.place(x = 180,y = 100)
+
+labelpwd = Label(text = "Password:")
+labelpwd.place(x = 100, y = 200)
+password = StringVar()
+password.set('**************')
+saisiePwd = Entry(widow,textvariable = password,bd = '5')
+saisiePwd.place(x = 180, y = 200)
+
+
+widow.mainloop()
