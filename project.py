@@ -7,6 +7,39 @@ widow.geometry("600x400")
 
 #labeltitre = Label(text = "Connection",relief=GROOVE)
 #labeltitre.place( x = 270, y = 50)
+def ajoutcaissier():
+    win = Toplevel(widow)
+    win.geometry("600x600")
+    win.title("Ajout de Caisse")
+    labeltitre = Label(win,text = "Remplir les champs de saisie :")
+    labeltitre.place(x = 100 , y =10)
+    labelid = Label(win,text = "Identifiant :")
+    labelid.place(x = 20 , y = 50)
+
+    labelnom = Label(win,text = "Nom :")
+    labelnom.place(x = 20 , y = 100)
+
+    labelprenom = Label(win,text = "Prénom :")
+    labelprenom.place(x = 20 , y = 150)
+
+    labeldate = Label(win,text="Date de naissance :")
+    labeldate.place( x = 20, y = 200)
+
+    labeladresse = Label(win , text = "Adresse :")
+    labeladresse.place(x = 20 , y = 250)
+
+    labelpostalcode = Label(win, text = "Code postal :")
+    labelpostalcode.place(x = 20 , y =300)
+
+    labellogin = Label(win, text = "Login :")
+    labellogin.place(x = 20 , y = 350)
+
+    labelpassword = Label(win, text = "Password :")
+    labelpassword.place(x = 20 , y = 400)
+
+    quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
+    quitbutton.place(x = 500, y = 550)
+
 
 def fenQuit(widow):
     widow.destroy()
@@ -53,7 +86,7 @@ def managerinterface():
     labelmanager = Label(win,text = "Interface Manager :")
     labelmanager.place(x = 100,y = 10)
 
-    ajoutcaissebutton= Button(win, text = "Ajout de Caissier",height = 3)
+    ajoutcaissebutton= Button(win, text = "Ajout de Caissier",height = 3, command = ajoutcaissier)
     ajoutcaissebutton.place(x = 40 , y = 50)
 
     affichercaisier = Button(win,text = "Afficher Caissier",height = 3)
