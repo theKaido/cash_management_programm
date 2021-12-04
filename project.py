@@ -13,6 +13,11 @@ def ajoutcaissier():
     win.title("Ajout de Caisse")
     labeltitre = Label(win,text = "Remplir les champs de saisie :")
     labeltitre.place(x = 100 , y =10)
+
+    ID = StringVar()
+    ID.set("Identifiant")
+    iden = Entry(win , textvariable = ID,width = "15")
+    iden.place( x = 100,y = 50)
     labelid = Label(win,text = "Identifiant :")
     labelid.place(x = 20 , y = 50)
 
