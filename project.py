@@ -37,6 +37,12 @@ def ajoutcaissier():
     labelpassword = Label(win, text = "Password :")
     labelpassword.place(x = 20 , y = 400)
 
+    savebutton = Button(win , text ="Enregistrer")
+    savebutton.place(x = 50 , y = 550)
+
+    cleanbutton = Button(win ,text ="Vider")
+    cleanbutton.place(x = 150 , y = 550)
+
     quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
     quitbutton.place(x = 500, y = 550)
 
