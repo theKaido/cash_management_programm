@@ -81,10 +81,18 @@ def ajoutcaissier():
 
 def affichercaissier():
     win = Toplevel(widow)
-    win.geometry("400x400")
+    win.geometry("500x500")
     win.title("Fenetre d'affichage caisse")
+   
+    ID = StringVar()
+    ID.set("Saisir Identifiant")
+    iden = Entry(win , textvariable = ID,width = "15")
+    iden.place( x = 130,y = 50)
+    labelid = Label(win,text = "Identifiant :")
+    labelid.place(x = 20 , y = 50)
+
     quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
-    quitbutton.place(x = 350, y = 390)
+    quitbutton.place(x = 420, y = 450)
 
 
 def fenQuit(widow):
@@ -135,7 +143,7 @@ def managerinterface():
     ajoutcaissebutton= Button(win, text = "Ajout de Caissier",height = 3, command = ajoutcaissier)
     ajoutcaissebutton.place(x = 40 , y = 50)
 
-    affichercaisierbutton = Button(win,text = "Afficher Caissier",height = 3)
+    affichercaisierbutton = Button(win,text = "Afficher Caissier",height = 3,command = affichercaissier)
     affichercaisierbutton.place(x = 210 , y = 50)
 
     supprimercaisier = Button(win,text = "Suprrimer Caissier",height = 3)
