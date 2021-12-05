@@ -79,6 +79,13 @@ def ajoutcaissier():
     quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
     quitbutton.place(x = 500, y = 550)
 
+def affichercaissier():
+    win = Toplevel(widow)
+    win.geometry("400x400")
+    win.title("Fenetre d'affichage caisse")
+    quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
+    quitbutton.place(x = 350, y = 390)
+
 
 def fenQuit(widow):
     widow.destroy()
@@ -128,8 +135,8 @@ def managerinterface():
     ajoutcaissebutton= Button(win, text = "Ajout de Caissier",height = 3, command = ajoutcaissier)
     ajoutcaissebutton.place(x = 40 , y = 50)
 
-    affichercaisier = Button(win,text = "Afficher Caissier",height = 3)
-    affichercaisier.place(x = 210 , y = 50)
+    affichercaisierbutton = Button(win,text = "Afficher Caissier",height = 3)
+    affichercaisierbutton.place(x = 210 , y = 50)
 
     supprimercaisier = Button(win,text = "Suprrimer Caissier",height = 3)
     supprimercaisier.place(x = 40 , y = 140)
