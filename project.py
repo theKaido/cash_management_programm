@@ -7,6 +7,8 @@ widow.geometry("600x400")
 
 #labeltitre = Label(text = "Connection",relief=GROOVE)
 #labeltitre.place( x = 270, y = 50)
+ 
+
 def ajoutcaissier():
     win = Toplevel(widow)
     win.geometry("600x600")
@@ -69,8 +71,14 @@ def ajoutcaissier():
     password.place(x = 130 , y = 400)
     labelpassword = Label(win, text = "Password :")
     labelpassword.place(x = 20 , y = 400)
+    def saveaddcaissier():
+        save = ID.get()+"\n"+Nom.get()+"\n"+Prenom.get()+"\n"+Dateofbirth.get()+"\n"+Adresse.get()+"\n"+Codepostal.get()+"\n"+Login.get()+"\n"+Password.get()+"\n\n\n"
+        fichier = open("data.txt", "w")
+        fichier.write(save)
+        fichier.close()
 
-    savebutton = Button(win , text ="Enregistrer")
+
+    savebutton = Button(win , text ="Enregistrer",command = saveaddcaissier)
     savebutton.place(x = 50 , y = 550)
 
     cleanbutton = Button(win ,text ="Vider")
@@ -91,6 +99,7 @@ def affichercaissier():
     labelid = Label(win,text = "Identifiant :")
     labelid.place(x = 20 , y = 50)
 
+    afficher
     quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
     quitbutton.place(x = 420, y = 450)
 
@@ -169,8 +178,7 @@ saisieUser.place(x = 180,y = 100)
 labelpwd = Label(text = "Password:")
 labelpwd.place(x = 100, y = 200)
 password = StringVar()
-password.set('**************')
-saisiePwd = Entry(widow,textvariable = password)
+saisiePwd = Entry(widow,show='*',textvariable=password)
 saisiePwd.place(x = 180, y = 200)
 
 butonconnect = Button(text = "Connection",relief = RAISED,command = connect)#On va ensuite modifier ce label en bouton pour afficher une fenetre de connection
