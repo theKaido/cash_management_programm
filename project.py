@@ -76,12 +76,21 @@ def ajoutcaissier():
         fichier = open("data.txt", "w")
         fichier.write(save)
         fichier.close()
+    def erasecase():
+       iden.delete(0,'end')
+       name.delete(0,'end')
+       prenom.delete(0,'end')
+       dateofbirth.delete(0,'end')
+       adresse.delete(0,'end')
+       codepostal.delete(0,'end')
+       login.delete(0,'end')
+       password.delete(0,'end')
 
 
     savebutton = Button(win , text ="Enregistrer",command = saveaddcaissier)
     savebutton.place(x = 50 , y = 550)
 
-    cleanbutton = Button(win ,text ="Vider")
+    cleanbutton = Button(win ,text ="Effacer",command = erasecase)
     cleanbutton.place(x = 150 , y = 550)
 
     quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
@@ -89,19 +98,30 @@ def ajoutcaissier():
 
 def affichercaissier():
     win = Toplevel(widow)
-    win.geometry("500x500")
+    win.geometry("250x250")
     win.title("Fenetre d'affichage caisse")
    
     ID = StringVar()
     ID.set("Saisir Identifiant")
-    iden = Entry(win , textvariable = ID,width = "15")
-    iden.place( x = 130,y = 50)
+    iden = Entry(win , textvariable = ID,width = "13")
+    iden.place( x = 100,y = 50)
     labelid = Label(win,text = "Identifiant :")
     labelid.place(x = 20 , y = 50)
 
-    afficher
+    afficherbutton = Button(win , text = "Afficher \nle caissier \n saisie",height = 4)
+    afficherbutton.place(x = 20 , y = 100)
+
+    affichertout = Button(win , text = "Afficher\n tout\n les caissiers",height = 4)
+    affichertout.place (x = 120, y = 100)
+
+    def effacebutonaffiche():
+        iden.delete(0,'end')
+
+    cleanaffichebutton = Button(win ,text ="Effacer",command = effacebutonaffiche)
+    cleanaffichebutton.place(x = 20 , y = 200)
+
     quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
-    quitbutton.place(x = 420, y = 450)
+    quitbutton.place(x = 150, y = 200)
 
 
 def fenQuit(widow):
