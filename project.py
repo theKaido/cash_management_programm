@@ -11,6 +11,23 @@ widow.geometry("600x400")
 def delentryaffiche():
     iden.delete(0,'end')
 
+def affichestockcaissier():
+    win = Toplevel(widow)
+    win.geometry("900x900")
+    win.title("Afficher Stock")
+
+    fruitetlegumes = Button(win , text = "Fruit\n et \nLégumes",height = 5)
+    fruitetlegumes.place(x =20 , y = 50 )
+
+    boulangerie = Button(win , text = "Boulangerie" , height = 5)
+    boulangerie.place(x = 20 , y = 150)
+
+    meatandfish = Button(win , text = "Boucherie\n et \nPoissonerie", height = 5)
+    meatandfish.place(x = 20 , y = 250)
+
+    produitentretien = Button(win , text = "Produit\nd'entretien",height = 5)
+    produitentretien.place(x = 20 , y = 350)
+
 
 def ajoutcaissier():
     win = Toplevel(widow)
@@ -150,6 +167,7 @@ def supprcaisier():
 def fenQuit(widow):
     widow.destroy()
 
+
 def connect():
     win = Toplevel(widow)
     win.geometry("400x400")
@@ -164,6 +182,9 @@ def connect():
     quitbutton1 = Button(win, text = "Quitter",command = lambda root=win:fenQuit(root))
     quitbutton1.place(x = 270, y = 350 )
 
+
+
+
 def caisierinterface():
     win = Toplevel(widow)
     win.geometry("400x400") 
@@ -172,7 +193,7 @@ def caisierinterface():
     labelcaissier = Label(win, text= "Interface Caissier :")
     labelcaissier.place(x=100, y = 10)
 
-    afficherstock = Button(win, text = "Afficher Stock",height = 3)
+    afficherstock = Button(win, text = "Afficher Stock",height = 3, command = affichestockcaissier)
     afficherstock.place(x=40 , y = 50)
 
     ticketdecaisse = Button(win , text = "Ticket de Caisse", height = 3)
@@ -183,6 +204,8 @@ def caisierinterface():
 
     quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
     quitbutton.place(x = 270, y = 350)
+
+
 
 def managerinterface():
     win = Toplevel(widow)
@@ -211,14 +234,14 @@ def managerinterface():
     quitbutton.place(x = 270, y = 350)
 
 
-labelid = Label(text = "Login:",)
+labelid = Label(text = "Login :",)
 labelid.place(x = 100 , y = 100)
 user = StringVar()
 user.set("ID")
 saisieUser = Entry(widow,textvariable = user)
 saisieUser.place(x = 180,y = 100)
 
-labelpwd = Label(text = "Password:")
+labelpwd = Label(text = "Password :")
 labelpwd.place(x = 100, y = 200)
 password = StringVar()
 saisiePwd = Entry(widow,show='*',textvariable=password)
