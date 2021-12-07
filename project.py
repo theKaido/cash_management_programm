@@ -8,6 +8,9 @@ widow.geometry("600x400")
 #labeltitre = Label(text = "Connection",relief=GROOVE)
 #labeltitre.place( x = 270, y = 50)
  
+def delentryaffiche():
+    iden.delete(0,'end')
+
 
 def ajoutcaissier():
     win = Toplevel(widow)
@@ -76,6 +79,7 @@ def ajoutcaissier():
         fichier = open("data.txt", "w")
         fichier.write(save)
         fichier.close()
+
     def erasecase():
        iden.delete(0,'end')
        name.delete(0,'end')
@@ -114,11 +118,30 @@ def affichercaissier():
     affichertout = Button(win , text = "Afficher\n tout\n les caissiers",height = 4)
     affichertout.place (x = 120, y = 100)
 
-    def effacebutonaffiche():
-        iden.delete(0,'end')
+    
+    vidersaisie = Button(win ,text ="Effacer",command = delentryaffiche)
+    vidersaisie.place(x = 20 , y = 200)
 
-    cleanaffichebutton = Button(win ,text ="Effacer",command = effacebutonaffiche)
-    cleanaffichebutton.place(x = 20 , y = 200)
+    quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
+    quitbutton.place(x = 150, y = 200)
+
+def supprcaisier():
+    win = Toplevel(widow)
+    win.geometry("250x250")
+    win.title("Fenetre d'affichage caisse")
+   
+    ID = StringVar()
+    ID.set("Saisir Identifiant")
+    iden = Entry(win , textvariable = ID,width = "13")
+    iden.place( x = 100,y = 50)
+    labelid = Label(win,text = "Identifiant :")
+    labelid.place(x = 20 , y = 50)
+
+    supprbutton = Button(win , text = "Supprimer \nle caissier \n saisie",height = 4)
+    supprbutton.place(x = 20 , y = 100)
+
+    vidersaisie = Button(win ,text ="Effacer",command = delentryaffiche)
+    vidersaisie.place(x = 20 , y = 200)
 
     quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
     quitbutton.place(x = 150, y = 200)
@@ -175,7 +198,7 @@ def managerinterface():
     affichercaisierbutton = Button(win,text = "Afficher Caissier",height = 3,command = affichercaissier)
     affichercaisierbutton.place(x = 210 , y = 50)
 
-    supprimercaisier = Button(win,text = "Suprrimer Caissier",height = 3)
+    supprimercaisier = Button(win,text = "Suprrimer Caissier",height = 3,command = supprcaisier)
     supprimercaisier.place(x = 40 , y = 140)
 
     suivievente = Button(win,text = "Suivie de Vente",height = 3)
