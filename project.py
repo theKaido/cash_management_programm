@@ -11,38 +11,6 @@ widow.geometry("600x400")
 def delentryaffiche():
     iden.delete(0,'end')
 
-
-
-
-
-def affichercaissier():
-    win = Toplevel(widow)
-    win.geometry("250x250")
-    win.title("Fenetre d'affichage caisse")
-   
-    ID = StringVar()
-    ID.set("Saisir Identifiant")
-    iden = Entry(win , textvariable = ID,width = "13")
-    iden.place( x = 100,y = 50)
-    labelid = Label(win,text = "Identifiant :")
-    labelid.place(x = 20 , y = 50)
-
-    afficherbutton = Button(win , text = "Afficher \nle caissier \n saisie",height = 4)
-    afficherbutton.place(x = 20 , y = 100)
-
-    affichertout = Button(win , text = "Afficher\n tout\n les caissiers",height = 4)
-    affichertout.place (x = 120, y = 100)
-
-    
-    vidersaisie = Button(win ,text ="Effacer",command = delentryaffiche)
-    vidersaisie.place(x = 20 , y = 200)
-
-    quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
-    quitbutton.place(x = 150, y = 200)
-
-
-
-
 def fenQuit(widow):
     widow.destroy()
 
@@ -70,20 +38,80 @@ def caisierinterface():
     win.title("Interface Caisier")
     def affichestockcaissier():
         win = Toplevel(widow)
-        win.geometry("900x900")
+        win.geometry("1100x600")
         win.title("Afficher Stock")
 
         fruitetlegumes = Button(win , text = "Fruit\n et \nLégumes",height = 5)
-        fruitetlegumes.place(x =20 , y = 50 )
+        fruitetlegumes.place(x =10 , y = 50 )
+        pomme = Button(win , text = "Pomme" , height = 5)
+        pomme.place(x = 140 , y = 50)
+        banane = Button(win , text = "Banane", height = 5)
+        banane.place(x = 220 , y = 50)
+        mangue = Button(win , text = "Mangue", height = 5)
+        mangue.place( x = 300 , y = 50)
+        orange = Button(win , text = "Orange", height = 5)
+        orange.place(x = 380 , y = 50)
+        ananas = Button(win , text = "Ananas", height = 5)
+        ananas.place( x = 460 , y = 50)
+        salade = Button(win , text = "Salade ", height = 5)
+        salade.place(x = 540 , y = 50)
+        haricot = Button(win, text = "Haricot ", height = 5)
+        haricot.place(x = 620 , y = 50)
+        poivrons = Button(win, text = "Poivrons ", height = 5)
+        poivrons.place(x = 700 , y = 50)
+        piment = Button(win, text = "Piment", height = 5)
+        piment.place(x = 780 , y = 50)
+        tomate = Button(win , text = "Tomates", height = 5)
+        tomate.place(x = 860, y = 50)
 
         boulangerie = Button(win , text = "Boulangerie" , height = 5)
-        boulangerie.place(x = 20 , y = 150)
+        boulangerie.place(x = 10 , y = 150)
+        baguette = Button(win , text ="Baguette", height = 5)
+        baguette.place(x = 140 , y = 150)
+        tradition = Button(win, text = "Tradition", height = 5)
+        tradition.place(x = 220, y = 150)
+        pain = Button ( win , text = "Pain \nau noix", height = 5)
+        pain.place(x= 300 , y = 150)
+        croissant = Button (win , text = "Croissant", height = 5)
+        croissant.place(x = 380 , y = 150)
+        brioche = Button(win , text= "Brioche", height = 5)
+        brioche.place(x = 460 , y = 150)
+        gateau = Button(win , text = "Gateau" , height = 5)
+        gateau.place(x = 540, y  = 150)
+        levures = Button(win , text = "Levures" , height = 5)
+        levures.place(x = 620 , y = 150)
+        boisson = Button(win , text = "Boisson" , height = 5)
+        boisson.place(x = 700 , y = 150)
+        tarte = Button(win ,text ="Tartes" , height = 5)
+        tarte.place(x = 780 , y = 150)
+        sandwich= Button(win , text = "Sandwich", height = 5)
+        sandwich.place(x = 850 , y = 150)
 
         meatandfish = Button(win , text = "Boucherie\n et \nPoissonerie", height = 5)
-        meatandfish.place(x = 20 , y = 250)
+        meatandfish.place(x = 10 , y = 250)
+        boeuf = Button(win , text = "Boeuf \nVache", height = 5)
+        boeuf.place(x = 140 , y = 250)
+        poulet = Button(win , text = "Poulet", height = 5)
+        poulet.place(x = 210 ,y = 250)
+        mouton = Button(win, text = "Mouton",height = 5)
+        mouton.place(x = 280 , y = 250)
+        cochon = Button(win, text = "Cochon", height = 5)
+        cochon.place(x = 380, y = 250)
+        crabe = Button(win,text = "Crabe", height = 5)
+        crabe.place(x = 460, y = 250)
+        saumon = Button(win, text = "Saumon", height = 5)
+        saumon.place(x = 540 , y = 250)
+        truite = Button(win ,text = "Truite", height = 5)
+        truite.place(x = 620, y= 250 )
+        sardine = Button(win, text = "Sardine", height = 5)
+        sardine.place(x = 700, y = 250)
+        crevettes = Button(win, text = "Crevettes",height = 5)
+        crevettes.place(x = 780, y =250)
+        lapin = Button(win , text = "Lapin" , height = 5)
+        lapin.place(x = 860 , y = 250)
 
         produitentretien = Button(win , text = "Produit\nd'entretien",height = 5)
-        produitentretien.place(x = 20 , y = 350)
+        produitentretien.place(x = 10 , y = 350)
 
 
     labelcaissier = Label(win, text= "Interface Caissier :")
@@ -196,6 +224,31 @@ def managerinterface():
 
         quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
         quitbutton.place(x = 500, y = 550)
+
+    def affichercaissier():
+        win = Toplevel(widow)
+        win.geometry("250x250")
+        win.title("Fenetre d'affichage caisse")
+   
+        ID = StringVar()
+        ID.set("Saisir Identifiant")
+        iden = Entry(win , textvariable = ID,width = "13")
+        iden.place( x = 100,y = 50)
+        labelid = Label(win,text = "Identifiant :")
+        labelid.place(x = 20 , y = 50)
+
+        afficherbutton = Button(win , text = "Afficher \nle caissier \n saisie",height = 4)
+        afficherbutton.place(x = 20 , y = 100)
+
+        affichertout = Button(win , text = "Afficher\n tout\n les caissiers",height = 4)
+        affichertout.place (x = 120, y = 100)
+
+    
+        vidersaisie = Button(win ,text ="Effacer",command = delentryaffiche)
+        vidersaisie.place(x = 20 , y = 200)
+
+        quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
+        quitbutton.place(x = 150, y = 200)
 
     def supprcaisier():
         win = Toplevel(widow)
