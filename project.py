@@ -11,111 +11,9 @@ widow.geometry("600x400")
 def delentryaffiche():
     iden.delete(0,'end')
 
-def affichestockcaissier():
-    win = Toplevel(widow)
-    win.geometry("900x900")
-    win.title("Afficher Stock")
-
-    fruitetlegumes = Button(win , text = "Fruit\n et \nLégumes",height = 5)
-    fruitetlegumes.place(x =20 , y = 50 )
-
-    boulangerie = Button(win , text = "Boulangerie" , height = 5)
-    boulangerie.place(x = 20 , y = 150)
-
-    meatandfish = Button(win , text = "Boucherie\n et \nPoissonerie", height = 5)
-    meatandfish.place(x = 20 , y = 250)
-
-    produitentretien = Button(win , text = "Produit\nd'entretien",height = 5)
-    produitentretien.place(x = 20 , y = 350)
 
 
-def ajoutcaissier():
-    win = Toplevel(widow)
-    win.geometry("600x600")
-    win.title("Ajout de Caisse")
-    labeltitre = Label(win,text = "Remplir les champs de saisie :")
-    labeltitre.place(x = 100 , y =10)
 
-    ID = StringVar()
-    ID.set("Saisir Identifiant")
-    iden = Entry(win , textvariable = ID,width = "40")
-    iden.place( x = 130,y = 50)
-    labelid = Label(win,text = "Identifiant :")
-    labelid.place(x = 20 , y = 50)
-
-    Nom= StringVar()
-    Nom.set("Saisir Nom")
-    name = Entry(win, textvariable = Nom,width="40")
-    name.place(x = 130,y = 100)
-    labelnom = Label(win,text = "Nom :")
-    labelnom.place(x = 20 , y = 100)
-   
-    Prenom = StringVar()
-    Prenom.set("Saisir Prenom")
-    prenom = Entry(win , textvariable = Prenom,width ="40")
-    prenom.place(x = 130 , y =150)
-    labelprenom = Label(win,text = "Prénom :")
-    labelprenom.place(x = 20 , y = 150)
-
-    Dateofbirth= StringVar()
-    Dateofbirth.set("format demandé AAAA/MM/JJ")
-    dateofbirth = Entry(win , textvariable = Dateofbirth,width = "40")
-    dateofbirth.place(x = 130 , y = 200)
-    labeldate = Label(win,text="Date of birth:")
-    labeldate.place( x = 20, y = 200)
-
-    Adresse = StringVar()
-    Adresse.set("Saisir Adresse")
-    adresse = Entry(win , textvariable = Adresse,width = "40")
-    adresse.place(x = 130 , y = 250)
-    labeladresse = Label(win , text = "Adresse :")
-    labeladresse.place(x = 20 , y = 250)
-
-    Codepostal = StringVar()
-    Codepostal.set("Saisir Code postal")
-    codepostal = Entry ( win , textvariable = Codepostal,width = "40")
-    codepostal.place(x = 130 , y = 300)
-    labelpostalcode = Label(win, text = "Code postal :")
-    labelpostalcode.place(x = 20 , y =300)
-
-    Login = StringVar()
-    Login.set("Choisiser votre login")
-    login= Entry(win,textvariable = Login,width = "40")
-    login.place(x = 130 , y = 350)
-    labellogin = Label(win, text = "Login :")
-    labellogin.place(x = 20 , y = 350)
-
-    Password = StringVar()
-    Password.set("Entrez votre mot de passe")
-    password = Entry(win , textvariable = Password,width = "40")
-    password.place(x = 130 , y = 400)
-    labelpassword = Label(win, text = "Password :")
-    labelpassword.place(x = 20 , y = 400)
-    def saveaddcaissier():
-        save = ID.get()+"\n"+Nom.get()+"\n"+Prenom.get()+"\n"+Dateofbirth.get()+"\n"+Adresse.get()+"\n"+Codepostal.get()+"\n"+Login.get()+"\n"+Password.get()+"\n\n\n"
-        fichier = open("data.txt", "w")
-        fichier.write(save)
-        fichier.close()
-
-    def erasecase():
-       iden.delete(0,'end')
-       name.delete(0,'end')
-       prenom.delete(0,'end')
-       dateofbirth.delete(0,'end')
-       adresse.delete(0,'end')
-       codepostal.delete(0,'end')
-       login.delete(0,'end')
-       password.delete(0,'end')
-
-
-    savebutton = Button(win , text ="Enregistrer",command = saveaddcaissier)
-    savebutton.place(x = 50 , y = 550)
-
-    cleanbutton = Button(win ,text ="Effacer",command = erasecase)
-    cleanbutton.place(x = 150 , y = 550)
-
-    quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
-    quitbutton.place(x = 500, y = 550)
 
 def affichercaissier():
     win = Toplevel(widow)
@@ -142,26 +40,7 @@ def affichercaissier():
     quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
     quitbutton.place(x = 150, y = 200)
 
-def supprcaisier():
-    win = Toplevel(widow)
-    win.geometry("250x250")
-    win.title("Fenetre d'affichage caisse")
-   
-    ID = StringVar()
-    ID.set("Saisir Identifiant")
-    iden = Entry(win , textvariable = ID,width = "13")
-    iden.place( x = 100,y = 50)
-    labelid = Label(win,text = "Identifiant :")
-    labelid.place(x = 20 , y = 50)
 
-    supprbutton = Button(win , text = "Supprimer \nle caissier \n saisie",height = 4)
-    supprbutton.place(x = 20 , y = 100)
-
-    vidersaisie = Button(win ,text ="Effacer",command = delentryaffiche)
-    vidersaisie.place(x = 20 , y = 200)
-
-    quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
-    quitbutton.place(x = 150, y = 200)
 
 
 def fenQuit(widow):
@@ -189,6 +68,23 @@ def caisierinterface():
     win = Toplevel(widow)
     win.geometry("400x400") 
     win.title("Interface Caisier")
+    def affichestockcaissier():
+        win = Toplevel(widow)
+        win.geometry("900x900")
+        win.title("Afficher Stock")
+
+        fruitetlegumes = Button(win , text = "Fruit\n et \nLégumes",height = 5)
+        fruitetlegumes.place(x =20 , y = 50 )
+
+        boulangerie = Button(win , text = "Boulangerie" , height = 5)
+        boulangerie.place(x = 20 , y = 150)
+
+        meatandfish = Button(win , text = "Boucherie\n et \nPoissonerie", height = 5)
+        meatandfish.place(x = 20 , y = 250)
+
+        produitentretien = Button(win , text = "Produit\nd'entretien",height = 5)
+        produitentretien.place(x = 20 , y = 350)
+
 
     labelcaissier = Label(win, text= "Interface Caissier :")
     labelcaissier.place(x=100, y = 10)
@@ -211,6 +107,116 @@ def managerinterface():
     win = Toplevel(widow)
     win.geometry("400x400")
     win.title("Interface Manager")
+
+    def ajoutcaissier():
+        win = Toplevel(widow)
+        win.geometry("600x600")
+        win.title("Ajout de Caisse")
+        labeltitre = Label(win,text = "Remplir les champs de saisie :")
+        labeltitre.place(x = 100 , y =10)
+
+        ID = StringVar()
+        ID.set("Saisir Identifiant")
+        iden = Entry(win , textvariable = ID,width = "40")
+        iden.place( x = 130,y = 50)
+        labelid = Label(win,text = "Identifiant :")
+        labelid.place(x = 20 , y = 50)
+
+        Nom= StringVar()
+        Nom.set("Saisir Nom")
+        name = Entry(win, textvariable = Nom,width="40")
+        name.place(x = 130,y = 100)
+        labelnom = Label(win,text = "Nom :")
+        labelnom.place(x = 20 , y = 100)
+   
+        Prenom = StringVar()
+        Prenom.set("Saisir Prenom")
+        prenom = Entry(win , textvariable = Prenom,width ="40")
+        prenom.place(x = 130 , y =150)
+        labelprenom = Label(win,text = "Prénom :")
+        labelprenom.place(x = 20 , y = 150)
+
+        Dateofbirth= StringVar()
+        Dateofbirth.set("format demandé AAAA/MM/JJ")
+        dateofbirth = Entry(win , textvariable = Dateofbirth,width = "40")
+        dateofbirth.place(x = 130 , y = 200)
+        labeldate = Label(win,text="Date of birth:")
+        labeldate.place( x = 20, y = 200)
+
+        Adresse = StringVar()
+        Adresse.set("Saisir Adresse")
+        adresse = Entry(win , textvariable = Adresse,width = "40")
+        adresse.place(x = 130 , y = 250)
+        labeladresse = Label(win , text = "Adresse :")
+        labeladresse.place(x = 20 , y = 250)
+
+        Codepostal = StringVar()
+        Codepostal.set("Saisir Code postal")
+        codepostal = Entry ( win , textvariable = Codepostal,width = "40")
+        codepostal.place(x = 130 , y = 300)
+        labelpostalcode = Label(win, text = "Code postal :")
+        labelpostalcode.place(x = 20 , y =300)
+
+        Login = StringVar()
+        Login.set("Choisiser votre login")
+        login= Entry(win,textvariable = Login,width = "40")
+        login.place(x = 130 , y = 350)
+        labellogin = Label(win, text = "Login :")
+        labellogin.place(x = 20 , y = 350)
+
+        Password = StringVar()
+        Password.set("Entrez votre mot de passe")
+        password = Entry(win , textvariable = Password,width = "40")
+        password.place(x = 130 , y = 400)
+        labelpassword = Label(win, text = "Password :")
+        labelpassword.place(x = 20 , y = 400)
+
+        def saveaddcaissier():
+            save = ID.get()+"\n"+Nom.get()+"\n"+Prenom.get()+"\n"+Dateofbirth.get()+"\n"+Adresse.get()+"\n"+Codepostal.get()+"\n"+Login.get()+"\n"+Password.get()+"\n\n\n"
+            fichier = open("data.txt", "w")
+            fichier.write(save)
+            fichier.close()
+
+        def erasecase():
+            iden.delete(0,'end')
+            name.delete(0,'end')
+            prenom.delete(0,'end')
+            dateofbirth.delete(0,'end')
+            adresse.delete(0,'end')
+            codepostal.delete(0,'end')
+            login.delete(0,'end')
+            password.delete(0,'end')
+
+
+        savebutton = Button(win , text ="Enregistrer",command = saveaddcaissier)
+        savebutton.place(x = 50 , y = 550)
+
+        cleanbutton = Button(win ,text ="Effacer",command = erasecase)
+        cleanbutton.place(x = 150 , y = 550)
+
+        quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
+        quitbutton.place(x = 500, y = 550)
+
+    def supprcaisier():
+        win = Toplevel(widow)
+        win.geometry("250x250")
+        win.title("Fenetre d'affichage caisse")
+   
+        ID = StringVar()
+        ID.set("Saisir Identifiant")
+        iden = Entry(win , textvariable = ID,width = "13")
+        iden.place( x = 100,y = 50)
+        labelid = Label(win,text = "Identifiant :")
+        labelid.place(x = 20 , y = 50)
+
+        supprbutton = Button(win , text = "Supprimer \nle caissier \n saisie",height = 4)
+        supprbutton.place(x = 20 , y = 100)
+
+        vidersaisie = Button(win ,text ="Effacer",command = delentryaffiche)
+        vidersaisie.place(x = 20 , y = 200)
+
+        quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
+        quitbutton.place(x = 150, y = 200)
 
     labelmanager = Label(win,text = "Interface Manager :")
     labelmanager.place(x = 100,y = 10)
@@ -247,7 +253,7 @@ password = StringVar()
 saisiePwd = Entry(widow,show='*',textvariable=password)
 saisiePwd.place(x = 180, y = 200)
 
-butonconnect = Button(text = "Connection",relief = RAISED,command = connect)#On va ensuite modifier ce label en bouton pour afficher une fenetre de connection
+butonconnect = Button(text = "Connection",relief = RAISED,command = connect)
 butonconnect.place( x = 150 , y = 300)
 
 quitbutton1 = Button(widow, text = "Quitter",command = lambda root=widow:fenQuit(root))
