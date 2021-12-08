@@ -470,7 +470,7 @@ def caisierinterface():
             entryZDT.config(text = affiche)
 
         produitentretien = Button(win , text = "Produit\nd'entretien",height = 5,command = entretienbutton)
-        produitentretien.place(x = 10 , y = 350)
+        produitentretien.place(x = 10 , y = 350,width=100,height=100)
         balai = Button(win, text = "Balai", height = 5, command = balaibutton)
         balai.place(x = 140,y=350,width=90,height=90)
         javel= Button(win , text = "Javel", height = 5,command = javelbutton)
