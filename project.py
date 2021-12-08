@@ -530,8 +530,13 @@ def caisierinterface():
         poubelle = Button(win ,text = "Poubelle", height =5,command = poubellebutton)
         poubelle.place(x = 770 ,y = 350)
 
+        labelinfo = Label(win, font =("Comic sans ms",17,"italic"),text = "Informations : ")
+        labelinfo.place (x = 400 , y = 500)
         entryZDT = Label(win,font=("Comic sans ms",14,"italic"),relief = GROOVE)
-        entryZDT.place(x=30, y = 450,width = 400,height = 100)
+        entryZDT.place(x=450, y = 550,width = 400,height = 100)
+
+        quittbutton1 = Button(win, text = "Quitter",command = lambda root=win:fenQuit(root))
+        quittbutton1.place(x = 850, y = 700 )
 
 
 
