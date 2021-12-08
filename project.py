@@ -168,7 +168,7 @@ def caisierinterface():
             Quantite.set(1000)
 
 
-            affiche ="Catégories : "+Idproduit.get()+"\nQuantités :"+str(Quantite.get())
+            affiche ="Catégories : "+Idproduit.get()+"\nQuantités de produit:"+str(Quantite.get())
             entryZDT.config(text = affiche)
 
         def baguettebutton():
