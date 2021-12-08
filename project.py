@@ -36,107 +36,503 @@ def caisierinterface():
     win = Toplevel(widow)
     win.geometry("400x400") 
     win.title("Interface Caisier")
-
+    Idproduit = StringVar()
+    Produitname = StringVar()
+    Quantite = StringVar()
+    Prix = StringVar()
 
     def affichestockcaissier():
         win = Toplevel(widow)
-        win.geometry("1100x800")
+        win.geometry("1100x900")
         win.title("Afficher Stock")
 
         title = Label(win , text = "Stock Caisse")
         title.place(x = 200 , y = 5)
 
-        fruitetlegumes = Button(win , text = "Fruit\n et \nLégumes",height = 5)
+        def pommebutton():
+            Idproduit.set("Fruit et Légumes")
+            Produitname.set("Pommes")
+            Quantite.set("10")
+            Prix.set("0.30 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def bananebutton():
+            Idproduit.set("Fruit et Légumes")
+            Produitname.set("Banane")
+            Quantite.set("10")
+            Prix.set("0.50 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def manguebutton():
+            Idproduit.set("Fruit et Légumes")
+            Produitname.set("Mangue")
+            Quantite.set("10")
+            Prix.set("2 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def orangebutton():
+            Idproduit.set("Fruit et Légumes")
+            Produitname.set("Oranges")
+            Quantite.set("10")
+            Prix.set("0.90 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def ananasbutton():
+            Idproduit.set("Fruit et Légumes")
+            Produitname.set("Ananas")
+            Quantite.set("10")
+            Prix.set("1,50 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def saladebutton():
+            Idproduit.set("Fruit et Légumes")
+            Produitname.set("Pommes")
+            Quantite.set("10")
+            Prix.set("0.30 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def haricotbutton():
+            Idproduit.set("Fruit et Légumes")
+            Produitname.set("Haricot")
+            Quantite.set("10")
+            Prix.set("0.70 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def poivronsbutton():
+            Idproduit.set("Fruit et Légumes")
+            Produitname.set("Poivrons")
+            Quantite.set("10")
+            Prix.set("0.50 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)    
+
+        def pimentbutton():
+            Idproduit.set("Fruit et Légumes")
+            Produitname.set("Piment")
+            Quantite.set("10")
+            Prix.set("0.3 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def tomatebutton():
+            Idproduit.set("Fruit et Légumes")
+            Produitname.set("Tomates")
+            Quantite.set("10")
+            Prix.set("0.3 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def fruitbutton():
+            Idproduit.set("Fruit et Légumes")
+            Quantite.set("100")
+           
+
+            affiche ="Catégories : "+Idproduit.get()+"\nQuantités de produit:"+Quantite.get()
+            entryZDT.config(text = affiche)
+
+        fruitetlegumes = Button(win , text = "Fruit\n et \nLégumes",height = 5 , command = fruitbutton)
         fruitetlegumes.place(x =10 , y = 50 )
-        pomme = Button(win , text = "Pomme" , height = 5)
+        pomme = Button(win , text = "Pomme" , height = 5,command = pommebutton)
         pomme.place(x = 140 , y = 50)
-        banane = Button(win , text = "Banane", height = 5)
+        banane = Button(win , text = "Banane", height = 5,command = bananebutton)
         banane.place(x = 220 , y = 50)
-        mangue = Button(win , text = "Mangue", height = 5)
+        mangue = Button(win , text = "Mangue", height = 5, command = manguebutton)
         mangue.place( x = 300 , y = 50)
-        orange = Button(win , text = "Orange", height = 5)
+        orange = Button(win , text = "Orange", height = 5, command = orangebutton)
         orange.place(x = 380 , y = 50)
-        ananas = Button(win , text = "Ananas", height = 5)
+        ananas = Button(win , text = "Ananas", height = 5, command = ananasbutton)
         ananas.place( x = 460 , y = 50)
-        salade = Button(win , text = "Salade ", height = 5)
+        salade = Button(win , text = "Salade ", height = 5, command= saladebutton)
         salade.place(x = 540 , y = 50)
-        haricot = Button(win, text = "Haricot ", height = 5)
+        haricot = Button(win, text = "Haricot ", height = 5, command = haricotbutton)
         haricot.place(x = 620 , y = 50)
-        poivrons = Button(win, text = "Poivrons ", height = 5)
+        poivrons = Button(win, text = "Poivrons ", height = 5,command = poivronsbutton)
         poivrons.place(x = 700 , y = 50)
-        piment = Button(win, text = "Piment", height = 5)
+        piment = Button(win, text = "Piment", height = 5, command = pimentbutton)
         piment.place(x = 780 , y = 50)
-        tomate = Button(win , text = "Tomates", height = 5)
+        tomate = Button(win , text = "Tomates", height = 5, command = tomatebutton)
         tomate.place(x = 860, y = 50)
 
-        boulangerie = Button(win , text = "Boulangerie" , height = 5)
+        
+        def boulangeriebutton():
+            Idproduit.set("Boulangerie")
+            Quantite.set("100")
+
+
+            affiche ="Catégories : "+Idproduit.get()+"\nQuantités :"+Quantite.get()
+            entryZDT.config(text = affiche)
+
+        def baguettebutton():
+            Idproduit.set("Boulangerie")
+            Produitname.set("Baguettes")
+            Quantite.set("10")
+            Prix.set("0.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def traditionbutton():
+            Idproduit.set("Boulangerie")
+            Produitname.set("Tradition")
+            Quantite.set("10")
+            Prix.set("1.20 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def painbutton(): 
+            Idproduit.set("Boulangerie")
+            Produitname.set("Pain au Noix")
+            Quantite.set("10")
+            Prix.set("2.20 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def croissantbutton():
+            Idproduit.set("Boulangerie")
+            Produitname.set("Croissant")
+            Quantite.set("10")
+            Prix.set("1.00 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def briochebutton():
+            Idproduit.set("Boulangerie")
+            Produitname.set("Brioche")
+            Quantite.set("10")
+            Prix.set("1.50 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def gateaubutton():
+            Idproduit.set("Boulangerie")
+            Produitname.set("Gateau")
+            Quantite.set("10")
+            Prix.set("15.00 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def levuresbutton():
+            Idproduit.set("Boulangerie")
+            Produitname.set("Levures")
+            Quantite.set("10")
+            Prix.set("0.90 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def boissonbutton():
+            Idproduit.set("Boulangerie")
+            Produitname.set("Boisson")
+            Quantite.set("10")
+            Prix.set("1.20 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def tartebutton():
+            Idproduit.set("Boulangerie")
+            Produitname.set("Tarte")
+            Quantite.set("10")
+            Prix.set("12.00 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def sandwichbutton():
+            Idproduit.set("Boulangerie")
+            Produitname.set("Sandwich")
+            Quantite.set("10")
+            Prix.set("5.00 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        boulangerie = Button(win , text = "Boulangerie" , height = 5, command = boulangeriebutton)
         boulangerie.place(x = 10 , y = 150)
-        baguette = Button(win , text ="Baguette", height = 5)
+        baguette = Button(win , text ="Baguette", height = 5,command = baguettebutton)
         baguette.place(x = 140 , y = 150)
-        tradition = Button(win, text = "Tradition", height = 5)
+        tradition = Button(win, text = "Tradition", height = 5,command = traditionbutton)
         tradition.place(x = 220, y = 150)
-        pain = Button ( win , text = "Pain \nau noix", height = 5)
+        pain = Button ( win , text = "Pain \nau noix", height = 5,command = painbutton)
         pain.place(x= 300 , y = 150)
-        croissant = Button (win , text = "Croissant", height = 5)
+        croissant = Button (win , text = "Croissant", height = 5,command = croissantbutton)
         croissant.place(x = 380 , y = 150)
-        brioche = Button(win , text= "Brioche", height = 5)
+        brioche = Button(win , text= "Brioche", height = 5,command = briochebutton)
         brioche.place(x = 460 , y = 150)
-        gateau = Button(win , text = "Gateau" , height = 5)
+        gateau = Button(win , text = "Gateau" , height = 5,command = gateaubutton)
         gateau.place(x = 540, y  = 150)
-        levures = Button(win , text = "Levures" , height = 5)
+        levures = Button(win , text = "Levures" , height = 5,command = levuresbutton)
         levures.place(x = 620 , y = 150)
-        boisson = Button(win , text = "Boisson" , height = 5)
+        boisson = Button(win , text = "Boisson" , height = 5,command = boissonbutton)
         boisson.place(x = 700 , y = 150)
-        tarte = Button(win ,text ="Tartes" , height = 5)
+        tarte = Button(win ,text ="Tartes" , height = 5,command = tartebutton)
         tarte.place(x = 780 , y = 150)
-        sandwich= Button(win , text = "Sandwich", height = 5)
+        sandwich= Button(win , text = "Sandwich", height = 5,command = sandwichbutton)
         sandwich.place(x = 850 , y = 150)
 
-        meatandfish = Button(win , text = "Boucherie\n et \nPoissonerie", height = 5)
+        def meatandfishbutton():
+            Idproduit.set("Boucherie et Poissonerie")
+            Quantite.set("100")
+            
+
+            affiche ="Catégories : "+Idproduit.get()+"\nQuantités de produit :"+Quantite.get()
+            entryZDT.config(text = affiche)
+
+        def boeufbutton():
+            Idproduit.set("Boucherie et Poissonerie")
+            Produitname.set("Boeuf/Vache")
+            Quantite.set("10")
+            Prix.set("5.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def pouletbutton():
+            Idproduit.set("Boucherie et Poissonerie")
+            Produitname.set("Poulet")
+            Quantite.set("10")
+            Prix.set("3.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def moutonbutton():
+            Idproduit.set("Boucherie et Poissonerie")
+            Produitname.set("Mouton")
+            Quantite.set("10")
+            Prix.set("4.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def cochonbutton():
+            Idproduit.set("Boucherie et Poissonerie")
+            Produitname.set("Cochon")
+            Quantite.set("10")
+            Prix.set("3.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def crabebutton():
+            Idproduit.set("Boucherie et Poissonerie")
+            Produitname.set("Crabes")
+            Quantite.set("10")
+            Prix.set("6.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def saumonbutton(): 
+            Idproduit.set("Boucherie et Poissonerie")
+            Produitname.set("Saumon")
+            Quantite.set("10")
+            Prix.set("10.00 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        def truitebutton():
+            Idproduit.set("Boucherie et Poissonerie")
+            Produitname.set("Truite")
+            Quantite.set("10")
+            Prix.set("2.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        def sardinebutton():
+            Idproduit.set("Boucherie et Poissonerie")
+            Produitname.set("Sardine")
+            Quantite.set("10")
+            Prix.set("3.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        def crevettesbutton():
+            Idproduit.set("Boucherie et Poissonerie")
+            Produitname.set("Boeuf/Vache")
+            Quantite.set("10")
+            Prix.set("4.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        def lapinbutton():
+            Idproduit.set("Boucherie et Poissonerie")
+            Produitname.set("Lapin")
+            Quantite.set("10")
+            Prix.set("5.00 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+
+        meatandfish = Button(win , text = "Boucherie\n et \nPoissonerie", height = 5, command = meatandfishbutton)
         meatandfish.place(x = 10 , y = 250)
-        boeuf = Button(win , text = "Boeuf \nVache", height = 5)
+        boeuf = Button(win , text = "Boeuf \nVache", height = 5,command = boeufbutton)
         boeuf.place(x = 140 , y = 250)
-        poulet = Button(win , text = "Poulet", height = 5)
+        poulet = Button(win , text = "Poulet", height = 5, command = pouletbutton)
         poulet.place(x = 210 ,y = 250)
-        mouton = Button(win, text = "Mouton",height = 5)
+        mouton = Button(win, text = "Mouton",height = 5, command = moutonbutton)
         mouton.place(x = 280 , y = 250)
-        cochon = Button(win, text = "Cochon", height = 5)
+        cochon = Button(win, text = "Cochon", height = 5,command = cochonbutton)
         cochon.place(x = 360, y = 250)
-        crabe = Button(win,text = "Crabe", height = 5)
+        crabe = Button(win,text = "Crabe", height = 5,command = crabebutton)
         crabe.place(x = 440, y = 250)
-        saumon = Button(win, text = "Saumon", height = 5)
+        saumon = Button(win, text = "Saumon", height = 5,command = saumonbutton)
         saumon.place(x = 510 , y = 250)
-        truite = Button(win ,text = "Truite", height = 5)
+        truite = Button(win ,text = "Truite", height = 5,command = truitebutton)
         truite.place(x = 580, y= 250 )
-        sardine = Button(win, text = "Sardine", height = 5)
+        sardine = Button(win, text = "Sardine", height = 5,command = sardinebutton)
         sardine.place(x = 640, y = 250)
-        crevettes = Button(win, text = "Crevettes",height = 5)
+        crevettes = Button(win, text = "Crevettes",height = 5,command = crevettesbutton)
         crevettes.place(x = 710, y =250)
-        lapin = Button(win , text = "Lapin" , height = 5)
+        lapin = Button(win , text = "Lapin" , height = 5,command = lapinbutton)
         lapin.place(x = 790 , y = 250)
 
-        produitentretien = Button(win , text = "Produit\nd'entretien",height = 5)
+        def entretienbutton():
+            Idproduit.set("Produit d'Entretien")
+            Quantite.set("100")
+ 
+            affiche ="Catégories : "+Idproduit.get()+"\nQuantités de produit :"+Quantite.get()
+            entryZDT.config(text = affiche)
+        
+        def balaibutton():
+            Idproduit.set("Produit d'Entretien")
+            Produitname.set("Balai")
+            Quantite.set("10")
+            Prix.set("3.00 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def javelbutton():
+            Idproduit.set("Produit d'Entretien")
+            Produitname.set("Javel")
+            Quantite.set("10")
+            Prix.set("2.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def soudebutton():
+            Idproduit.set("Produit d'Entretien")
+            Produitname.set("Soude")
+            Quantite.set("10")
+            Prix.set("5.50 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def lessivebutton():
+            Idproduit.set("Produit d'Entretien")
+            Produitname.set("Lessive")
+            Quantite.set("10")
+            Prix.set("6.50 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def epongebutton():
+            Idproduit.set("Produit d'Entretien")
+            Produitname.set("Eponge")
+            Quantite.set("10")
+            Prix.set("0.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def vaisellebutton():
+            Idproduit.set("Produit d'Entretien")
+            Produitname.set("Vaiselle")
+            Quantite.set("10")
+            Prix.set("1.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def chiffonbutton():
+            Idproduit.set("Produit d'Entretien")
+            Produitname.set("Chiffon")
+            Quantite.set("10")
+            Prix.set("0.50 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        def gantbutton():
+            Idproduit.set("Produit d'Entretien")
+            Produitname.set("Gant")
+            Quantite.set("10")
+            Prix.set("0.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def sceaubutton():
+            Idproduit.set("Produit d'Entretien")
+            Produitname.set("Sceau")
+            Quantite.set("10")
+            Prix.set("3.00 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+        
+        def poubellebutton():
+            Idproduit.set("Produit d'Entretien")
+            Produitname.set("Sac Poubelle")
+            Quantite.set("10")
+            Prix.set("3.80 $")
+
+            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+Quantite.get()+"\nPrix: "+Prix.get()
+            entryZDT.config(text = affiche)
+
+        produitentretien = Button(win , text = "Produit\nd'entretien",height = 5,command = entretienbutton)
         produitentretien.place(x = 10 , y = 350)
-        balai = Button(win, text = "Balai", height = 5)
+        balai = Button(win, text = "Balai", height = 5, command = balaibutton)
         balai.place(x = 140,y=350)
-        javel= Button(win , text = "Javel", height = 5)
+        javel= Button(win , text = "Javel", height = 5,command = javelbutton)
         javel.place(x = 200, y = 350)
-        soude = Button(win , text = "Soude", height = 5)
+        soude = Button(win , text = "Soude", height = 5,command = soudebutton)
         soude.place(x = 260 , y = 350)
-        lessive = Button(win , text = "Lessive", height = 5)
+        lessive = Button(win , text = "Lessive", height = 5,command = lessivebutton)
         lessive.place(x = 320 , y = 350)
-        eponge = Button(win ,text = "Eponge", height = 5)
+        eponge = Button(win ,text = "Eponge", height = 5,command =epongebutton)
         eponge.place(x = 400 , y = 350)
-        vaiselle = Button(win , text = "Vaiselle", height = 5)
+        vaiselle = Button(win , text = "Vaiselle", height = 5,command = vaisellebutton)
         vaiselle.place(x = 480 , y = 350)
-        chiffon = Button(win , text = "Chiffon", height = 5)
+        chiffon = Button(win , text = "Chiffon", height = 5,command = chiffonbutton)
         chiffon.place(x = 560 , y = 350)
-        gant = Button(win, text = "Gant" , height =5)
+        gant = Button(win, text = "Gant" , height =5,command = gantbutton)
         gant.place(x = 640 , y = 350)
-        sceau = Button(win , text = "Sceau", height = 5)
+        sceau = Button(win , text = "Sceau", height = 5,command = sceaubutton)
         sceau.place(x = 700 , y = 350)
-        poubelle = Button(win ,text = "Poubelle", height =5)
+        poubelle = Button(win ,text = "Poubelle", height =5,command = poubellebutton)
         poubelle.place(x = 770 ,y = 350)
+
+        entryZDT = Label(win,font=("Comic sans ms",14,"italic"),relief = GROOVE)
+        entryZDT.place(x=30, y = 450,width = 400,height = 100)
+
 
 
     labelcaissier = Label(win, text= "Interface Caissier :")
