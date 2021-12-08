@@ -1,6 +1,7 @@
 # Projet_Interface
     Sujet:
-        "GesMag" est une application Python avec des interfaces graphiques développées en Tkinter dont le but est de développer la gestion d'une caisse d'un magasin "
+        "GesMag" est une application Python avec des interfaces graphiques développées 
+        en Tkinter dont le but est de développer la gestion d'une caisse d'un magasin "
 
 
 # Interface de Connection
