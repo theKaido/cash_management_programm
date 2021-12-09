@@ -346,7 +346,7 @@ def caisierinterface():
             entryZDT.config(text = affiche)
         def crevettesbutton():
             Idproduit.set("Boucherie et Poissonerie")
-            Produitname.set("Boeuf/Vache")
+            Produitname.set("Crevettes")
             Quantite.set(100)
             Prix.set(10.0)
             affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
@@ -502,11 +502,17 @@ def caisierinterface():
         quittbutton1.place(x = 850, y = 700 )
 
     def ticketdecaissebutton():
+        messagebox.showinfo("None","En Cours de Développement")
         win = Toplevel(widow)
         win.geometry("500x700")
         win.title("Ticket de Caisse")
+        
 
-
+    def exportstat():
+        messagebox.showinfo("None","En Cours de Développement")
+        win = Toplevel(widow)
+        win.geometry("500x500")
+        win.title("Exportation stats")
 
     labelcaissier = Label(win, text= "Interface Caissier :")
     labelcaissier.place(x=100, y = 10)
@@ -514,10 +520,10 @@ def caisierinterface():
     afficherstock = Button(win, text = "Afficher Stock",height = 3, command = affichestockcaissier)
     afficherstock.place(x=40 , y = 50)
 
-    ticketdecaisse = Button(win , text = "Ticket de Caisse", height = 3)
+    ticketdecaisse = Button(win , text = "Ticket de Caisse", height = 3,command = ticketdecaissebutton)
     ticketdecaisse.place(x = 210 , y = 50)
 
-    interfaceexportstat = Button(win, text="Interface Export\n Statistique", height = 3)
+    interfaceexportstat = Button(win, text="Interface Export\n Statistique", height = 3,command = exportstat)
     interfaceexportstat.place(x = 40 , y =140)
 
     quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
@@ -646,15 +652,11 @@ def managerinterface():
                     else :
                         messagebox.showinfo("Erreur","Identifiant non trouver")
 
-
         afficherbutton = Button(win , text = "Afficher \nle caissier \n saisie",height = 4,command = afficherbuttoncaissier)
         afficherbutton.place(x = 20 , y = 100)
 
         affichertout = Button(win , text = "Afficher\n tout\n les caissiers",height = 4)
         affichertout.place (x = 120, y = 100)
-
-        def deleteentryaffiche():
-            iden.delete(0,'end')
 
         vidersaisie = Button(win ,text ="Effacer",command = deleteentryaffiche)
         vidersaisie.place(x = 20 , y = 200)
@@ -687,6 +689,14 @@ def managerinterface():
         quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
         quitbutton.place(x = 150, y = 200)
 
+    def suivieventebutton():
+        messagebox.showinfo("None","En cours de Developpement")
+        win = Toplevel(widow)
+        win.geometry("250x250")
+        win.title("Fenetre d'affichage caisse")
+
+
+
     labelmanager = Label(win,text = "Interface Manager :")
     labelmanager.place(x = 100,y = 10)
 
@@ -699,7 +709,7 @@ def managerinterface():
     supprimercaisier = Button(win,text = "Suprrimer Caissier",height = 3,command = supprcaisier)
     supprimercaisier.place(x = 40 , y = 140)
 
-    suivievente = Button(win,text = "Suivie de Vente",height = 3)
+    suivievente = Button(win,text = "Suivie de Vente",height = 3,command = suivieventebutton)
     suivievente.place( x = 210 , y = 140)
 
     modecaisse = Button(win,text="Mode Caisse",height = 3,command = caisierinterface)
