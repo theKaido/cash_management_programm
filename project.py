@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 
 
 widow = Tk()
@@ -596,6 +597,7 @@ def managerinterface():
             save = ID.get()+"\n"+Nom.get()+"\n"+Prenom.get()+"\n"+Dateofbirth.get()+"\n"+Adresse.get()+"\n"+Codepostal.get()+"\n"+Login.get()+"\n"+Password.get()+"\n\n\n"
             fichier = open("data.txt", "w")
             fichier.write(save)
+            messagebox.showinfo("Enregistrement","Succes")
             fichier.close()
 
         def erasecase():
@@ -629,15 +631,32 @@ def managerinterface():
         iden.place( x = 100,y = 50)
         labelid = Label(win,text = "Identifiant :")
         labelid.place(x = 20 , y = 50)
+        def afficherbuttoncaissier():
+            with open("data.txt", "r") as information:
+                linge = information.readlin()
+                while ligne != "":
+                    if str(ID.get()) == linge :
+                        messagebox.showinfo("Valid","Identifiant trouver")
+                        win = Toplevel(widow) 
+                        win.geometry("400x900")
+                        win.title("Afficher Caissier:")
+                        labelaffiche = Label(win , font =("Comic sans ms",14,"italic"),relief = GROOVE)
+                        labelaffiche.place(x = 10, y =10,width = 300, height = 800)
+                        fichier.close()
+                    else :
+                        messagebox.showinfo("Erreur","Identifiant non trouver")
 
-        afficherbutton = Button(win , text = "Afficher \nle caissier \n saisie",height = 4)
+
+        afficherbutton = Button(win , text = "Afficher \nle caissier \n saisie",height = 4,command = afficherbuttoncaissier)
         afficherbutton.place(x = 20 , y = 100)
 
         affichertout = Button(win , text = "Afficher\n tout\n les caissiers",height = 4)
         affichertout.place (x = 120, y = 100)
 
-    
-        vidersaisie = Button(win ,text ="Effacer",command = delentryaffiche)
+        def deleteentryaffiche():
+            iden.delete(0,'end')
+
+        vidersaisie = Button(win ,text ="Effacer",command = deleteentryaffiche)
         vidersaisie.place(x = 20 , y = 200)
 
         quitbutton = Button(win, text = "Quitter", command = lambda root = win:fenQuit(root))
@@ -655,7 +674,11 @@ def managerinterface():
         labelid = Label(win,text = "Identifiant :")
         labelid.place(x = 20 , y = 50)
 
-        supprbutton = Button(win , text = "Supprimer \nle caissier \n saisie",height = 4)
+        def supprimercaisier():
+            open("data.txt","w").close()
+            messagebox.showinfo("Succes","Caissier supprimé")
+
+        supprbutton = Button(win , text = "Supprimer \nle caissier \n saisie",height = 4,command = supprimercaisier)
         supprbutton.place(x = 20 , y = 100)
 
         vidersaisie = Button(win ,text ="Effacer",command = delentryaffiche)
