@@ -639,9 +639,9 @@ def managerinterface():
         labelid.place(x = 20 , y = 50)
         def afficherbuttoncaissier():
             with open("data.txt", "r") as information:
-                linge = information.readlin()
+                ligne = information.readline()
                 while ligne != "":
-                    if str(ID.get()) == linge :
+                    if str(ID.get()) == ligne :
                         messagebox.showinfo("Valid","Identifiant trouver")
                         win = Toplevel(widow) 
                         win.geometry("400x900")
@@ -651,6 +651,9 @@ def managerinterface():
                         fichier.close()
                     else :
                         messagebox.showinfo("Erreur","Identifiant non trouver")
+                        
+        def deleteentryaffiche():
+            ID.delete(0,'end')
 
         afficherbutton = Button(win , text = "Afficher \nle caissier \n saisie",height = 4,command = afficherbuttoncaissier)
         afficherbutton.place(x = 20 , y = 100)
