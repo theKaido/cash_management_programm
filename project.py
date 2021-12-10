@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+from tkinter import ttk
 
 
 widow = Tk()
@@ -53,94 +54,94 @@ def caisierinterface():
        
 
         def pommebutton():
-            Idproduit.set("Fruit et Légumes")
+            Idproduit.set("Fruit et Legumes")
             Produitname.set("Pommes")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def bananebutton():
-            Idproduit.set("Fruit et Légumes")
+            Idproduit.set("Fruit et Legumes")
             Produitname.set("Banane")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def manguebutton():
-            Idproduit.set("Fruit et Légumes")
+            Idproduit.set("Fruit et Legumes")
             Produitname.set("Mangue")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def orangebutton():
-            Idproduit.set("Fruit et Légumes")
+            Idproduit.set("Fruit et Legumes")
             Produitname.set("Oranges")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def ananasbutton():
-            Idproduit.set("Fruit et Légumes")
+            Idproduit.set("Fruit et Legumes")
             Produitname.set("Ananas")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def saladebutton():
-            Idproduit.set("Fruit et Légumes")
+            Idproduit.set("Fruit et Legumes")
             Produitname.set("Pommes")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def haricotbutton():
-            Idproduit.set("Fruit et Légumes")
+            Idproduit.set("Fruit et Legumes")
             Produitname.set("Haricot")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def poivronsbutton():
-            Idproduit.set("Fruit et Légumes")
+            Idproduit.set("Fruit et Legumes")
             Produitname.set("Poivrons")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)    
 
         def pimentbutton():
-            Idproduit.set("Fruit et Légumes")
+            Idproduit.set("Fruit et Legumes")
             Produitname.set("Piment")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def tomatebutton():
-            Idproduit.set("Fruit et Légumes")
+            Idproduit.set("Fruit et Legumes")
             Produitname.set("Tomates")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def fruitbutton():
-            Idproduit.set("Fruit et Légumes")
+            Idproduit.set("Fruit et Legumes")
             Quantite.set(1000)
            
 
-            affiche ="Catégories : "+Idproduit.get()+"\nQuantités de produit:"+str(Quantite.get())
+            affiche ="Categories : "+Idproduit.get()+"\nQuantites de produit:"+str(Quantite.get())
             entryZDT.config(text = affiche)
 
-        fruitetlegumes = Button(win , text = "Fruit\n et \nLégumes",height = 5 , command = fruitbutton)
+        fruitetlegumes = Button(win , text = "Fruit\n et \nLegumes",height = 5 , command = fruitbutton)
         fruitetlegumes.place(x =10 , y = 50,width=100,height=100 )
         pomme = Button(win , text = "Pomme" , height = 5,command = pommebutton)
         pomme.place(x = 140 , y = 50,width=90,height=90)
@@ -169,7 +170,7 @@ def caisierinterface():
             Quantite.set(1000)
 
 
-            affiche ="Catégories : "+Idproduit.get()+"\nQuantités de produit:"+str(Quantite.get())
+            affiche ="Categories : "+Idproduit.get()+"\nQuantites de produit:"+str(Quantite.get())
             entryZDT.config(text = affiche)
 
         def baguettebutton():
@@ -177,7 +178,7 @@ def caisierinterface():
             Produitname.set("Baguettes")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def traditionbutton():
@@ -185,7 +186,7 @@ def caisierinterface():
             Produitname.set("Tradition")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def painbutton(): 
@@ -193,7 +194,7 @@ def caisierinterface():
             Produitname.set("Pain au Noix")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def croissantbutton():
@@ -201,7 +202,7 @@ def caisierinterface():
             Produitname.set("Croissant")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def briochebutton():
@@ -209,7 +210,7 @@ def caisierinterface():
             Produitname.set("Brioche")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def gateaubutton():
@@ -217,7 +218,7 @@ def caisierinterface():
             Produitname.set("Gateau")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def levuresbutton():
@@ -225,7 +226,7 @@ def caisierinterface():
             Produitname.set("Levures")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def boissonbutton():
@@ -233,7 +234,7 @@ def caisierinterface():
             Produitname.set("Boisson")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def tartebutton():
@@ -241,7 +242,7 @@ def caisierinterface():
             Produitname.set("Tarte")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def sandwichbutton():
@@ -249,7 +250,7 @@ def caisierinterface():
             Produitname.set("Sandwich")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         boulangerie = Button(win ,text = "Boulangerie",height = 4, command = boulangeriebutton)
@@ -280,7 +281,7 @@ def caisierinterface():
             Quantite.set(1000)
             
 
-            affiche ="Catégories : "+Idproduit.get()+"\nQuantités de produit :"+str(Quantite.get())
+            affiche ="Categories : "+Idproduit.get()+"\nQuantites de produit :"+str(Quantite.get())
             entryZDT.config(text = affiche)
 
         def boeufbutton():
@@ -288,7 +289,7 @@ def caisierinterface():
             Produitname.set("Boeuf/Vache")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def pouletbutton():
@@ -296,7 +297,7 @@ def caisierinterface():
             Produitname.set("Poulet")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def moutonbutton():
@@ -304,7 +305,7 @@ def caisierinterface():
             Produitname.set("Mouton")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def cochonbutton():
@@ -312,7 +313,7 @@ def caisierinterface():
             Produitname.set("Cochon")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def crabebutton():
@@ -320,7 +321,7 @@ def caisierinterface():
             Produitname.set("Crabes")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def saumonbutton(): 
@@ -328,35 +329,35 @@ def caisierinterface():
             Produitname.set("Saumon")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         def truitebutton():
             Idproduit.set("Boucherie et Poissonerie")
             Produitname.set("Truite")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         def sardinebutton():
             Idproduit.set("Boucherie et Poissonerie")
             Produitname.set("Sardine")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         def crevettesbutton():
             Idproduit.set("Boucherie et Poissonerie")
             Produitname.set("Crevettes")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         def lapinbutton():
             Idproduit.set("Boucherie et Poissonerie")
             Produitname.set("Lapin")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
 
@@ -387,7 +388,7 @@ def caisierinterface():
             Idproduit.set("Produit d'Entretien")
             Quantite.set(1000)
  
-            affiche ="Catégories : "+Idproduit.get()+"\nQuantités de produit :"+str(Quantite.get())
+            affiche ="Categories : "+Idproduit.get()+"\nQuantites de produit :"+str(Quantite.get())
             entryZDT.config(text = affiche)
         
         def balaibutton():
@@ -395,7 +396,7 @@ def caisierinterface():
             Produitname.set("Balai")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def javelbutton():
@@ -403,7 +404,7 @@ def caisierinterface():
             Produitname.set("Javel")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def soudebutton():
@@ -411,7 +412,7 @@ def caisierinterface():
             Produitname.set("Soude")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def lessivebutton():
@@ -419,7 +420,7 @@ def caisierinterface():
             Produitname.set("Lessive")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def epongebutton():
@@ -427,7 +428,7 @@ def caisierinterface():
             Produitname.set("Eponge")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def vaisellebutton():
@@ -435,7 +436,7 @@ def caisierinterface():
             Produitname.set("Vaiselle")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def chiffonbutton():
@@ -443,7 +444,7 @@ def caisierinterface():
             Produitname.set("Chiffon")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         def gantbutton():
@@ -451,7 +452,7 @@ def caisierinterface():
             Produitname.set("Gant")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def sceaubutton():
@@ -459,7 +460,7 @@ def caisierinterface():
             Produitname.set("Sceau")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
         
         def poubellebutton():
@@ -467,7 +468,7 @@ def caisierinterface():
             Produitname.set("Sac Poubelle")
             Quantite.set(100)
             Prix.set(10.0)
-            affiche ="Catégories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantités :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
+            affiche ="Categories : "+Idproduit.get()+"\nProduit : "+Produitname.get()+"\nQuantites :"+str(Quantite.get())+"\nPrix: "+str(Prix.get())+"$"
             entryZDT.config(text = affiche)
 
         produitentretien = Button(win , text = "Produit\nd'entretien",height = 5,command = entretienbutton)
@@ -502,14 +503,14 @@ def caisierinterface():
         quittbutton1.place(x = 850, y = 700 )
 
     def ticketdecaissebutton():
-        messagebox.showinfo("None","En Cours de Développement")
+        messagebox.showinfo("None","En Cours de Developpement")
         win = Toplevel(widow)
         win.geometry("500x700")
         win.title("Ticket de Caisse")
         
 
     def exportstat():
-        messagebox.showinfo("None","En Cours de Développement")
+        messagebox.showinfo("None","En Cours de Developpement")
         win = Toplevel(widow)
         win.geometry("500x500")
         win.title("Exportation stats")
@@ -561,11 +562,11 @@ def managerinterface():
         Prenom.set("Saisir Prenom")
         prenom = Entry(win , textvariable = Prenom,width ="40")
         prenom.place(x = 130 , y =150)
-        labelprenom = Label(win,text = "Prénom :")
+        labelprenom = Label(win,text = "Prenom :")
         labelprenom.place(x = 20 , y = 150)
 
         Dateofbirth= StringVar()
-        Dateofbirth.set("format demandé AAAA/MM/JJ")
+        Dateofbirth.set("format demande AAAA/MM/JJ")
         dateofbirth = Entry(win , textvariable = Dateofbirth,width = "40")
         dateofbirth.place(x = 130 , y = 200)
         labeldate = Label(win,text="Date of birth:")
@@ -655,10 +656,35 @@ def managerinterface():
         def deleteentryaffiche():
             ID.delete(0,'end')
 
+
+        def affichertoutbutton():
+            win = Toplevel(widow)
+            win.geometry("400x200")
+            win.title("Afficher les Caissier ")
+
+            tv = ttk.Treeview(win)
+            tv['columns']=('Rang', 'Name', 'Login')
+            tv.column('#0', width=0, stretch=NO)
+            tv.column('Rang', anchor=CENTER, width=80)
+            tv.column('Name', anchor=CENTER, width=80)
+            tv.column('Login', anchor=CENTER, width=80)
+
+            tv.heading('#0', text='', anchor=CENTER)
+            tv.heading('Rang', text='Id', anchor=CENTER)
+            tv.heading('Name', text='rank', anchor=CENTER)
+            tv.heading('Login', text='Badge', anchor=CENTER)
+
+            tv.insert(parent='', index=0, iid=0, text='', values=('1','Vineet','Alpha'))
+            tv.insert(parent='', index=1, iid=1, text='', values=('2','Anil','Bravo'))
+            tv.insert(parent='', index=2, iid=2, text='', values=('3','Vinod','Charlie'))
+            tv.insert(parent='', index=3, iid=3, text='', values=('4','Vimal','Delta'))
+            tv.insert(parent='', index=4, iid=4, text='', values=('5','Manjeet','Echo'))
+            tv.pack()
+
         afficherbutton = Button(win , text = "Afficher \nle caissier \n saisie",height = 4,command = afficherbuttoncaissier)
         afficherbutton.place(x = 20 , y = 100)
 
-        affichertout = Button(win , text = "Afficher\n tout\n les caissiers",height = 4)
+        affichertout = Button(win , text = "Afficher\n tout\n les caissiers",height = 4,command = affichertoutbutton)
         affichertout.place (x = 120, y = 100)
 
         vidersaisie = Button(win ,text ="Effacer",command = deleteentryaffiche)
@@ -681,7 +707,7 @@ def managerinterface():
 
         def supprimercaisier():
             open("data.txt","w").close()
-            messagebox.showinfo("Succes","Caissier supprimé")
+            messagebox.showinfo("Succes","Caissier supprime")
 
         supprbutton = Button(win , text = "Supprimer \nle caissier \n saisie",height = 4,command = supprimercaisier)
         supprbutton.place(x = 20 , y = 100)
